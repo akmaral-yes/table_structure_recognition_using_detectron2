@@ -1,0 +1,14 @@
+PyPDF2
+Wand
+opencv-python
+pandas
+numpy
+lxml
+visdom
+torch
+fvcore
+nms
+pyyaml==5.1
+pycocotools>=2.0.1
+torchvision
+detectron2==0.2
