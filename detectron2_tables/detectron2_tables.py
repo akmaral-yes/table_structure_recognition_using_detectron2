@@ -66,7 +66,7 @@ def main():
                         help="Save images with predictions")
     parser.add_argument('--weights', default='final',
                         help="The number of iterations of the model or final")
-    parser.add_argument('--score_thresh', default='0.7',
+    parser.add_argument('--score_thresh', default='0.05',
                         help="A score threshold for predictions")
     parser.add_argument(
         '--loss_period',
@@ -157,8 +157,8 @@ def main():
         cfg.TEST.DETECTIONS_PER_IMAGE = 1000
         # Set the testing threshold for this model
         cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = float(args.score_thresh)
-        cfg.MODEL.RPN.POST_NMS_TOPK_TEST = 10000
-        cfg.MODEL.RPN.PRE_NMS_TOPK_TEST = 10000
+        cfg.MODEL.RPN.POST_NMS_TOPK_TEST = 5000
+        cfg.MODEL.RPN.PRE_NMS_TOPK_TEST = 5000
         if args.datatype in ['icdar', 'unlv', 'ctdar', 'other']:
             cfg.DATASETS.TEST = ("table_" + args.datatype, )
             table_metadata = MetadataCatalog.get("table_" + args.datatype)
