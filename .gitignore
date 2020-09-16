@@ -1,3 +1,10 @@
 /metrics/__pycache__
 /detectron2_tables/__pycache__
 /utils/__pycache__
+/models/big/column/model_0090000.pth
+/models/big/content/model_0300000.pth
+/models/big/row/model_0080000.pth
+/models/small/column/model_0023000.pth
+/models/small/cell/model_0020000.pth
+/models/small/content/model_0015000.pth
+/models/small/row/model_0025000.pth
